@@ -577,3 +577,8 @@ form {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 215, 0, 0.7);
 }
+
+select, option {
+    color: #222;
+    background: #fff;
+}
