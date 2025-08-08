@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Posições - Avalon SevenClouds</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="guild-info">
+                <div class="guild-header">
+                    <div class="guild-logo">
+                        <img src="logo.png" alt="SevenClouds Logo" class="logo-placeholder">
+                    </div>
+                    <div class="guild-text">
+                        <h1>Odisseia</h1>
+                        <p class="guild-motto">Juntos rumo à um futuro onde não haja fome e sede</p>
+                    </div>
+                </div>
+            </div>
+            <button class="register-btn" onclick="openRegistrationModal()">
+                <i class="fas fa-user-plus"></i> Inscrever-se
+            </button>
+        </header>
+
+        <div class="score-section">
+            <h2><i class="fas fa-trophy"></i> Score da Avalon Anterior</h2>
+            <div class="score-display" id="scoreDisplay">
+                <div class="score-item">
+                    <span class="score-label">Pontuação Total:</span>
+                    <span class="score-value" id="totalScore">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Posição no Ranking:</span>
+                    <span class="score-value" id="rankPosition">#0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Fame Ganho:</span>
+                    <span class="score-value" id="fameGained">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="positions-panel">
+            <h2><i class="fas fa-users"></i> Posições Disponíveis</h2>
+            
+            <div class="position-category">
+                <h3><i class="fas fa-shield-alt"></i> Tanques</h3>
+                <div class="positions-grid">
+                    <div class="position-card" data-position="Maintank">
+                        <div class="position-header">
+                            <i class="fas fa-shield"></i>
+                            <span>Maintank</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                    <div class="position-card" data-position="Offtank">
+                        <div class="position-header">
+                            <i class="fas fa-shield-halved"></i>
+                            <span>Offtank</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="position-category">
+                <h3><i class="fas fa-magic"></i> Arcanos</h3>
+                <div class="positions-grid">
+                    <div class="position-card" data-position="Arcano elevado">
+                        <div class="position-header">
+                            <i class="fas fa-star"></i>
+                            <span>Arcano Elevado</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                    <div class="position-card" data-position="Arcano 1h">
+                        <div class="position-header">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                            <span>Arcano 1h</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="position-category">
+                <h3><i class="fas fa-heart"></i> Healers</h3>
+                <div class="positions-grid">
+                    <div class="position-card" data-position="Main healer">
+                        <div class="position-header">
+                            <i class="fas fa-plus-circle"></i>
+                            <span>Main Healer</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                    <div class="position-card" data-position="Raiz Healer">
+                        <div class="position-header">
+                            <i class="fas fa-seedling"></i>
+                            <span>Raiz Healer</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                    <div class="position-card" data-position="Raiz Healer">
+                        <div class="position-header">
+                            <i class="fas fa-seedling"></i>
+                            <span>Raiz Healer</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                    <div class="position-card" data-position="Raiz Healer">
+                        <div class="position-header">
+                            <i class="fas fa-seedling"></i>
+                            <span>Raiz Healer</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="position-category">
+                <h3><i class="fas fa-leaf"></i> Raiz</h3>
+                <div class="positions-grid">
+                    <div class="position-card" data-position="Raiz BM">
+                        <div class="position-header">
+                            <i class="fas fa-tree"></i>
+                            <span>Raiz BM</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="position-category">
+                <h3><i class="fas fa-sword"></i> DPS</h3>
+                <div class="positions-grid">
+                    <div class="position-card" data-position="Bruxo">
+                        <div class="position-header">
+                            <i class="fas fa-hat-wizard"></i>
+                            <span>Bruxo</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                    <div class="position-card" data-position="Quebra">
+                        <div class="position-header">
+                            <i class="fas fa-hammer"></i>
+                            <span>Quebra</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                    <div class="position-card" data-position="Fire">
+                        <div class="position-header">
+                            <i class="fas fa-fire"></i>
+                            <span>Fire</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                    <div class="position-card" data-position="Frost">
+                        <div class="position-header">
+                            <i class="fas fa-snowflake"></i>
+                            <span>Frost</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                    <div class="position-card" data-position="Xbow">
+                        <div class="position-header">
+                            <i class="fas fa-crosshairs"></i>
+                            <span>Xbow</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                    <div class="position-card" data-position="Xbow">
+                        <div class="position-header">
+                            <i class="fas fa-crosshairs"></i>
+                            <span>Xbow</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                    <div class="position-card" data-position="Xbow">
+                        <div class="position-header">
+                            <i class="fas fa-crosshairs"></i>
+                            <span>Xbow</span>
+                        </div>
+                        <div class="position-status available">Disponível</div>
+                        <div class="position-player" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Inscrição -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-user-plus"></i> Inscrição para Avalon</h2>
+                <span class="close" onclick="closeRegistrationModal()">&times;</span>
+            </div>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="nickname">Nick no Jogo:</label>
+                    <input type="text" id="nickname" name="nickname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="primaryPosition">Posição Desejada:</label>
+                    <select id="primaryPosition" name="primaryPosition" required>
+                        <option value="">Selecione uma posição</option>
+                        <option value="Maintank">Maintank</option>
+                        <option value="Offtank">Offtank</option>
+                        <option value="Arcano elevado">Arcano Elevado</option>
+                        <option value="Arcano 1h">Arcano 1h</option>
+                        <option value="Main healer">Main Healer</option>
+                        <option value="Raiz BM">Raiz BM</option>
+                        <option value="Raiz Healer">Raiz Healer</option>
+                        <option value="Bruxo">Bruxo</option>
+                        <option value="Quebra">Quebra</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Frost">Frost</option>
+                        <option value="Xbow">Xbow</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="secondaryPosition">Segunda Opção de Posição:</label>
+                    <select id="secondaryPosition" name="secondaryPosition">
+                        <option value="">Selecione uma segunda opção</option>
+                        <option value="Maintank">Maintank</option>
+                        <option value="Offtank">Offtank</option>
+                        <option value="Arcano elevado">Arcano Elevado</option>
+                        <option value="Arcano 1h">Arcano 1h</option>
+                        <option value="Main healer">Main Healer</option>
+                        <option value="Raiz BM">Raiz BM</option>
+                        <option value="Raiz Healer">Raiz Healer</option>
+                        <option value="Bruxo">Bruxo</option>
+                        <option value="Quebra">Quebra</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Frost">Frost</option>
+                        <option value="Xbow">Xbow</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="motivationalPhrase">Frase Motivacional:</label>
+                    <textarea id="motivationalPhrase" name="motivationalPhrase" rows="3" placeholder="Digite sua frase motivacional..."></textarea>
+                </div>
+                
+                <div class="agreement">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <span class="checkmark"></span>
+                        Confirmo que vou pagar 89% de tudo que ganhar para a guild SevenClouds do Discord Odisseia para que assim a guild possa ajudar e alimentar as crianças do mundo.
+                    </label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" onclick="closeRegistrationModal()" class="btn-cancel">Cancelar</button>
+                    <button type="submit" class="btn-submit">Confirmar Inscrição</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2025 Criado pela <a href="https://discord.gg/JtEy3qmUwh" target="_blank">Odisseia</a></p>
+            </div>
+            <div class="footer-right">
+                <p>Desenvolvido com <i class="fas fa-heart"></i> para a comunidade</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

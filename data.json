@@ -1,0 +1,88 @@
+{
+  "players": [],
+  "score": {
+    "totalScore": 0,
+    "rankPosition": 0,
+    "fameGained": 0
+  },
+  "positions": {
+    "Maintank": {
+      "category": "Tanques",
+      "icon": "fas fa-shield",
+      "limit": 1,
+      "description": "Tank principal responsável por segurar o boss"
+    },
+    "Offtank": {
+      "category": "Tanques", 
+      "icon": "fas fa-shield-halved",
+      "limit": 1,
+      "description": "Tank secundário para adds e suporte"
+    },
+    "Arcano elevado": {
+      "category": "Arcanos",
+      "icon": "fas fa-star",
+      "limit": 1,
+      "description": "Arcano principal com maior poder"
+    },
+    "Arcano 1h": {
+      "category": "Arcanos",
+      "icon": "fas fa-wand-magic-sparkles", 
+      "limit": 1,
+      "description": "Arcano com arma de uma mão"
+    },
+    "Main healer": {
+      "category": "Healers",
+      "icon": "fas fa-plus-circle",
+      "limit": 1,
+      "description": "Healer principal do grupo"
+    },
+    "Raiz BM": {
+      "category": "Raiz",
+      "icon": "fas fa-tree",
+      "limit": 1,
+      "description": "Especialista em controle de multidão"
+    },
+    "Raiz Healer": {
+      "category": "Healers",
+      "icon": "fas fa-seedling",
+      "limit": 3,
+      "description": "Healers especializados em natureza"
+    },
+    "Bruxo": {
+      "category": "DPS",
+      "icon": "fas fa-hat-wizard",
+      "limit": 1,
+      "description": "DPS mágico especializado em maldições"
+    },
+    "Quebra": {
+      "category": "DPS", 
+      "icon": "fas fa-hammer",
+      "limit": 1,
+      "description": "Especialista em quebrar armaduras"
+    },
+    "Fire": {
+      "category": "DPS",
+      "icon": "fas fa-fire",
+      "limit": 1,
+      "description": "DPS especializado em magia de fogo"
+    },
+    "Frost": {
+      "category": "DPS",
+      "icon": "fas fa-snowflake", 
+      "limit": 1,
+      "description": "DPS especializado em magia de gelo"
+    },
+    "Xbow": {
+      "category": "DPS",
+      "icon": "fas fa-crosshairs",
+      "limit": 3,
+      "description": "DPS à distância com besta"
+    }
+  },
+  "guildInfo": {
+    "name": "SevenClouds",
+    "discord": "Odisseia",
+    "mission": "Ajudar e alimentar as crianças do mundo",
+    "contribution": "89%"
+  }
+}
